@@ -5,6 +5,7 @@ import Inventory from './components/Inventory/Inventory';
 import NotFound from './components/NotFound/NotFound';
 import OrderReview from './components/OrderReview/OrderReview';
 import Shop from './components/Shop/Shop';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
       <Route path="/review" element={<OrderReview></OrderReview>}></Route>
 
       <Route path="/inventory" element={<Inventory></Inventory>}></Route>
+      <Route path="/placeorder" element={<PlaceOrder></PlaceOrder>}></Route>
+
 
       <Route path="*" element={<NotFound></NotFound>}></Route>
 
