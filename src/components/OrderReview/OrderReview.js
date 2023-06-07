@@ -5,15 +5,19 @@ import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import { removeFromDb } from '../../utilities/fakedb';
 import { useNavigate } from 'react-router-dom';
+import { clearTheCart } from '../../utilities/fakedb';
 
 const OrderReview = () => {
-    const [products, setProducts] = useProducts();
+    const [products] = useProducts();
     const [cart,setCart] = useCart(products);
 
     const navigate  = useNavigate();
 
     const handlePlaceOrder = () => {
-        navigate('/placeorder')
+        navigate('/placeorder');
+        setCart([]);
+        clearTheCart();
+
 
     }
     const handleRemove = key => {
